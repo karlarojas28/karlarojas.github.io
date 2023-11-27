@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido! Por favor, escoja qué quiere realizar:</h1>
+        <button class="button" onclick="redirectToDatos()">Ingrese sus Datos</button>
+        <button class="button" onclick="showAnaliticaOptions()">Analítica Descriptiva</button>
+    </div>
+
+    <script>
+        function redirectToDatos() {
+            window.location.href = "https://1acda29c9ad37dba09.gradio.live";
+        }
+
+        function showAnaliticaOptions() {
+            var option = prompt("Seleccione una opción:\n1. Analítica de Clusters\n2. Analítica de Columnas");
+
+            if (option === "1") {
+                window.location.href = "https://cbe2ba803f00e52270.gradio.live";
+            } else if (option === "2") {
+                var columnOption = prompt("Seleccione una opción:\n1. Edad-Género\n2. Modelo-Marca\n3. Auto-Marca\n4. Genero-Estado Civil\n5. Edad-Tipo de Auto\n6. Modelo-Estado del Auto\n7. Estado del Auto-Monto Reclamado");
+
+                switch (columnOption) {
+                    case "1":
+                        window.location.href = "https://7a858139c81108cbc4.gradio.live";
+                        break;
+                    case "2":
+                        window.location.href = "https://73c60fa3f0ab000f12.gradio.live";
+                        break;
+                    case "3":
+                        window.location.href = "https://5bfdd76e7e9b1e72bb.gradio.live";
+                        break;
+                    case "4":
+                        window.location.href = "https://6ce7874dc667a5ebcd.gradio.live";
+                        break;
+                    case "5":
+                        window.location.href = "https://92451961db826a1655.gradio.live";
+                        break;
+                    case "6":
+                        window.location.href = "https://f0c71c1d32a381077f.gradio.live";
+                        break;
+                    case "7":
+                        window.location.href = "https://0724a0081ddca44060.gradio.live";
+                        break;
+                    default:
+                        alert("Opción no válida");
+                        break;
+                }
+            } else {
+                alert("Opción no válida");
+            }
+        }
+    </script>
+</body>
+</html>
